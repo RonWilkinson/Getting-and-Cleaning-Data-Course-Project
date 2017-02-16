@@ -69,7 +69,7 @@ basic_measures_summary <- gather(detail_measures, featuremeasure, value,-(subjec
         summarize(average=mean(value))
 
 
-## Create a more flexible summary of the contents of detail_measures
+## Create a more flexible summary of the contents of detail_measures using tiday data principles
 ##  -- Breaks the features into component parts useful for comparative analysis
 ##  -- contains the averagge measure value per subject/activity/featuretype/domain/metric/axis
 
@@ -84,6 +84,4 @@ flexible_measures_summary <-
         group_by(subjectid, activity, featuretype, domain, metric, axis) %>%
         summarize(average=mean(value))
 
-write.csv(detail_measures,"detail_measures.csv")
-write.csv(basic_measures_summary,"basic_measures_summary.csv")
-write.csv(flexible_measures_summary, "flexible_measures_summary.csv")
+write.table(flexible_measures_summary, "flexible_measures_summary.txt",row.names=FALSE)
