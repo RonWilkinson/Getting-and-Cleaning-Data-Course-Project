@@ -9,4 +9,4 @@ This repository contains:
   + creates a flexible summary dataframe using tidy data principles that breaks each featuremeasure into component categories useful for data manipulation ans provides an average value for each subject/activity/featuretype/domain/metric/axis combination  
   
 (2) A codebook for describing the detailed and summaized data in Codebook.md.  
-(3) Copies of the summarized datasets as csv files.
+(3) Copies of the detail and summarized datasets as csv files.
