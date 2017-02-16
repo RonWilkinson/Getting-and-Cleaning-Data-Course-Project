@@ -83,3 +83,7 @@ flexible_measures_summary <-
         rename( featuretype = feature) %>%
         group_by(subjectid, activity, featuretype, domain, metric, axis) %>%
         summarize(average=mean(value))
+
+write.csv(detail_measures,"detail_measures.csv")
+write.csv(basic_measures_summary,"basic_measures_summary.csv")
+write.csv(flexible_measures_summary, "flexible_measures_summary.csv")
